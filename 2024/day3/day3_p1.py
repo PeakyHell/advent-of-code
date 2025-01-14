@@ -4,13 +4,13 @@ def get_file(file_path):
     with open(file_path, 'r') as f:
         return f.read()
 
-def get_list_of_mul(content):
-    return re.findall(r"mul\(\d{1,3},\d{1,3}\)", content)
+def get_list_of_regex(content, regex):
+    return re.findall(regex, content)
 
 def clean_file_content(file_path):
     content = get_file(file_path)
     
-    lst = get_list_of_mul(content)
+    lst = get_list_of_regex(content, r"mul\(\d{1,3},\d{1,3}\)")
 
     sum = 0
     
