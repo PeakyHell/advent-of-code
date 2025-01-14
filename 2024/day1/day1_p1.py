@@ -1,7 +1,6 @@
-def total_distance(file_path):
+def get_columns(file_path):
     left_locations = []
     right_locations = []
-    distances = []
 
     with open(file_path, 'r') as f:
         file = f.read()
@@ -10,6 +9,12 @@ def total_distance(file_path):
             ids = line.split("   ")
             left_locations.append(int(ids[0]))
             right_locations.append(int(ids[1]))
+
+    return left_locations, right_locations
+
+def total_distance(file_path):
+    left_locations, right_locations = get_columns(file_path)
+    distances = []
 
     left_locations.sort()
     right_locations.sort()
@@ -26,4 +31,4 @@ def total_distance(file_path):
     
     return total_sum
 
-print(total_distance("./2024/txt_files/day1.txt"))
+print(total_distance("./2024/day1/day1_p1.txt"))
