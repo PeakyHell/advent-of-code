@@ -31,4 +31,4 @@ def total_distance(file_path):
     
     return total_sum
 
-print(total_distance("./2024/day1/day1_p1.txt"))
+print(total_distance("./2024/day1/day1.txt"))

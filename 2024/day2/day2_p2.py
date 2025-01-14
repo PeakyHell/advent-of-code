@@ -16,4 +16,4 @@ def count_safe_reports_with_tolerance(file_path):
                     break
     return count
 
-print(count_safe_reports_with_tolerance("./2024/day2/day2_p1.txt"))
+print(count_safe_reports_with_tolerance("./2024/day2/day2.txt"))

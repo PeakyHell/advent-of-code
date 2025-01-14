@@ -24,4 +24,4 @@ def similarity(file_path):
 
     return similarity_value
 
-print(similarity("./2024/day1/day1_p1.txt"))
+print(similarity("./2024/day1/day1.txt"))
